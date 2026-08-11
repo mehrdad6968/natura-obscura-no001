@@ -36,3 +36,9 @@ Cryptographic hash and verification data will be added to this record as part of
 ---
 
 © 2025 Natura Obscura — The Eternal Archive
+### Cryptographic Identity
+
+Algorithm: SHA-256
+
+SHA-256:
+eee926cd9019533d5337bbf0eb0006e664220254d0631b76b8fe52bef40266fb
