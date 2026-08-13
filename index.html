@@ -7,8 +7,13 @@
 <title>Natura Obscura — NO-001 | Lumen Orchid</title>
 
 <style>
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -129,6 +134,7 @@ h2 {
     color: #bfa66d;
     font-family: monospace;
     font-size: 14px;
+    line-height: 1.8;
 }
 
 .certificate-box {
@@ -146,12 +152,20 @@ h2 {
     color: #d6b56c;
     text-decoration: none;
     letter-spacing: 2px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .certificate-button:hover {
     background: #b99755;
     color: #050505;
+}
+
+.certificate-status {
+    margin-top: 18px;
+    color: #88734d;
+    font-size: 13px;
+    display: none;
 }
 
 .seal {
@@ -183,6 +197,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+
     header {
         padding-top: 35px;
     }
@@ -199,13 +214,21 @@ footer {
     .history {
         font-size: 15px;
     }
+
+    .hash {
+        font-size: 12px;
+    }
+
 }
+
 </style>
 </head>
+
 
 <body>
 
 <div class="container">
+
 
 <header>
 
@@ -226,14 +249,16 @@ footer {
 </header>
 
 
+
 <section class="hero">
 
     <img
-        src="./NO-001-original.png"
+        src="NO-001-original.png"
         alt="Natura Obscura NO-001 — Lumen Orchid"
     >
 
 </section>
+
 
 
 <section>
@@ -276,6 +301,7 @@ footer {
     </p>
 
 </section>
+
 
 
 <section>
@@ -341,6 +367,7 @@ footer {
 </section>
 
 
+
 <section>
 
     <h2>AUTHENTICITY</h2>
@@ -380,6 +407,7 @@ footer {
 </section>
 
 
+
 <section>
 
     <h2>OFFICIAL CERTIFICATE</h2>
@@ -393,17 +421,24 @@ footer {
         </p>
 
         <a
+            id="certificateButton"
             class="certificate-button"
-            href="./NO-001-Certificate-of-Authenticity.png"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
         >
             VIEW OFFICIAL CERTIFICATE
         </a>
 
+        <div
+            id="certificateStatus"
+            class="certificate-status"
+        >
+            Opening official certificate...
+        </div>
+
     </div>
 
 </section>
+
 
 
 <section>
@@ -421,6 +456,7 @@ footer {
     </div>
 
 </section>
+
 
 
 <div class="seal">
@@ -441,6 +477,7 @@ footer {
 </div>
 
 
+
 <footer>
 
     © 2025 NATURA OBSCURA — THE ETERNAL ARCHIVE
@@ -451,7 +488,72 @@ footer {
 
 </footer>
 
+
 </div>
 
+
+
+<script>
+
+const certificateButton =
+    document.getElementById("certificateButton");
+
+const certificateStatus =
+    document.getElementById("certificateStatus");
+
+
+const certificateFiles = [
+
+    "https://raw.githubusercontent.com/mehrdad6968/natura-obscura-no001/main/NO-001-Certificate-of-Authenticity.png",
+
+    "https://raw.githubusercontent.com/mehrdad6968/natura-obscura-no001/main/NO-001-Certificate-of-Authenticity.png.png"
+
+];
+
+
+certificateButton.addEventListener("click", async function(event) {
+
+    event.preventDefault();
+
+    certificateStatus.style.display = "block";
+
+    certificateStatus.textContent =
+        "Opening official certificate...";
+
+    for (const file of certificateFiles) {
+
+        try {
+
+            const response = await fetch(file, {
+                method: "HEAD",
+                cache: "no-store"
+            });
+
+            if (response.ok) {
+
+                window.open(file, "_blank");
+
+                certificateStatus.style.display = "none";
+
+                return;
+            }
+
+        } catch (error) {
+
+            console.log("Certificate check failed:", error);
+
+        }
+
+    }
+
+    certificateStatus.textContent =
+        "Certificate file could not be located.";
+
+});
+
+
+</script>
+
+
 </body>
-</html>
+    </html>
