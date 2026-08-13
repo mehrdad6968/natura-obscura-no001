@@ -7,13 +7,8 @@
 <title>Natura Obscura — NO-001 | Lumen Orchid</title>
 
 <style>
-
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -56,6 +51,16 @@ h1 {
     color: #9f8b68;
 }
 
+.verified {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 28px;
+    border: 1px solid #b99755;
+    color: #d8bb76;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
 .hero {
     margin: 45px auto;
     text-align: center;
@@ -68,16 +73,6 @@ h1 {
     margin: auto;
     border: 1px solid #6b542d;
     box-shadow: 0 0 45px rgba(190, 150, 70, 0.12);
-}
-
-.verified {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 28px;
-    border: 1px solid #b99755;
-    color: #d8bb76;
-    letter-spacing: 4px;
-    font-size: 13px;
 }
 
 section {
@@ -134,7 +129,6 @@ h2 {
     color: #bfa66d;
     font-family: monospace;
     font-size: 14px;
-    line-height: 1.8;
 }
 
 .certificate-box {
@@ -152,7 +146,6 @@ h2 {
     color: #d6b56c;
     text-decoration: none;
     letter-spacing: 2px;
-    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -161,11 +154,39 @@ h2 {
     color: #050505;
 }
 
-.certificate-status {
-    margin-top: 18px;
-    color: #88734d;
-    font-size: 13px;
+.verify-box {
+    background: #080808;
+    border: 1px solid #4e3d22;
+    padding: 30px;
+    text-align: center;
+}
+
+.verify-input {
+    width: 100%;
+    max-width: 650px;
+    padding: 15px;
+    margin: 15px 0;
+    background: #050505;
+    border: 1px solid #6b542d;
+    color: #d8c7a0;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.verify-button {
+    padding: 13px 30px;
+    background: transparent;
+    border: 1px solid #b99755;
+    color: #d6b56c;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.verify-result {
+    margin-top: 25px;
     display: none;
+    padding: 20px;
+    border: 1px solid #6b542d;
 }
 
 .seal {
@@ -216,19 +237,15 @@ footer {
     }
 
     .hash {
-        font-size: 12px;
+        font-size: 11px;
     }
-
 }
-
 </style>
 </head>
-
 
 <body>
 
 <div class="container">
-
 
 <header>
 
@@ -249,7 +266,6 @@ footer {
 </header>
 
 
-
 <section class="hero">
 
     <img
@@ -258,7 +274,6 @@ footer {
     >
 
 </section>
-
 
 
 <section>
@@ -289,10 +304,9 @@ footer {
 
     <p class="history">
         The specimen was designated NO-001 and recorded as a unique
-        1/1 digital artwork. Its identity was subsequently preserved
-        through archival documentation, a unique Certificate ID, and a
-        cryptographic SHA-256 fingerprint derived from the original
-        digital artwork.
+        1/1 digital artwork. Its identity is preserved through archival
+        documentation, a unique Certificate ID, and a cryptographic
+        SHA-256 fingerprint derived from the official digital artwork file.
     </p>
 
     <p class="history">
@@ -301,7 +315,6 @@ footer {
     </p>
 
 </section>
-
 
 
 <section>
@@ -367,7 +380,6 @@ footer {
 </section>
 
 
-
 <section>
 
     <h2>AUTHENTICITY</h2>
@@ -378,6 +390,13 @@ footer {
             <span class="label">Certificate ID</span>
             <span class="value">
                 NO-001-CT-0525-A1
+            </span>
+        </div>
+
+        <div class="item">
+            <span class="label">Authenticity Code</span>
+            <span class="value">
+                NO-A1-FL001-2026-0001
             </span>
         </div>
 
@@ -398,14 +417,13 @@ footer {
         <div class="item">
             <span class="label">Verification</span>
             <span class="value">
-                Cryptographically Registered
+                Cryptographic SHA-256 Identity
             </span>
         </div>
 
     </div>
 
 </section>
-
 
 
 <section>
@@ -421,24 +439,52 @@ footer {
         </p>
 
         <a
-            id="certificateButton"
             class="certificate-button"
-            href="#"
+            href="NO-001-Certificate-of-Authenticity.png"
+            target="_blank"
+            rel="noopener"
         >
             VIEW OFFICIAL CERTIFICATE
         </a>
-
-        <div
-            id="certificateStatus"
-            class="certificate-status"
-        >
-            Opening official certificate...
-        </div>
 
     </div>
 
 </section>
 
+
+<section>
+
+    <h2>VERIFY NO-001</h2>
+
+    <div class="verify-box">
+
+        <p class="history" style="margin-left:auto;margin-right:auto;">
+            Enter the official Authenticity Code to verify
+            the archived record of NO-001.
+        </p>
+
+        <input
+            id="codeInput"
+            class="verify-input"
+            type="text"
+            placeholder="Enter Authenticity Code"
+            autocomplete="off"
+        >
+
+        <br>
+
+        <button
+            class="verify-button"
+            onclick="verifyArtwork()"
+        >
+            VERIFY ARTWORK
+        </button>
+
+        <div id="verifyResult" class="verify-result"></div>
+
+    </div>
+
+</section>
 
 
 <section>
@@ -447,16 +493,14 @@ footer {
 
     <p class="history">
         The following SHA-256 fingerprint represents the cryptographic
-        identity of the archived original digital artwork associated
-        with NO-001.
+        identity of the official digital artwork file associated with NO-001.
     </p>
 
     <div class="hash">
-        eee926cd9019533d5337bbf0eb0006e664220254d0631b76b8fe52bef40266fb
+        b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
     </div>
 
 </section>
-
 
 
 <div class="seal">
@@ -477,7 +521,6 @@ footer {
 </div>
 
 
-
 <footer>
 
     © 2025 NATURA OBSCURA — THE ETERNAL ARCHIVE
@@ -488,72 +531,96 @@ footer {
 
 </footer>
 
-
 </div>
-
 
 
 <script>
 
-const certificateButton =
-    document.getElementById("certificateButton");
+function verifyArtwork() {
 
-const certificateStatus =
-    document.getElementById("certificateStatus");
+    const input = document
+        .getElementById("codeInput")
+        .value
+        .trim()
+        .toUpperCase();
 
+    const result = document
+        .getElementById("verifyResult");
 
-const certificateFiles = [
+    const officialCode = "NO-A1-FL001-2026-0001";
 
-    "https://raw.githubusercontent.com/mehrdad6968/natura-obscura-no001/main/NO-001-Certificate-of-Authenticity.png",
+    if (input === officialCode) {
 
-    "https://raw.githubusercontent.com/mehrdad6968/natura-obscura-no001/main/NO-001-Certificate-of-Authenticity.png.png"
+        result.style.display = "block";
 
-];
+        result.innerHTML = `
+            <h3 style="color:#d6b56c; letter-spacing:3px;">
+                VERIFIED
+            </h3>
 
+            <p>
+                The authenticity code is valid.
+            </p>
 
-certificateButton.addEventListener("click", async function(event) {
+            <p>
+                <strong>Work ID:</strong> NO-001
+            </p>
 
-    event.preventDefault();
+            <p>
+                <strong>Artwork:</strong> Lumen Orchid
+            </p>
 
-    certificateStatus.style.display = "block";
+            <p>
+                <strong>Edition:</strong> 1/1 — Unique
+            </p>
 
-    certificateStatus.textContent =
-        "Opening official certificate...";
+            <p>
+                <strong>Archive:</strong>
+                Archive I — Impossible Flora
+            </p>
 
-    for (const file of certificateFiles) {
+            <p>
+                <strong>SHA-256:</strong><br>
+                <span style="font-family:monospace; word-break:break-all;">
+                b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
+                </span>
+            </p>
 
-        try {
+            <a
+                href="NO-001-Certificate-of-Authenticity.png"
+                target="_blank"
+                rel="noopener"
+                style="
+                    display:inline-block;
+                    margin-top:15px;
+                    padding:12px 25px;
+                    border:1px solid #b99755;
+                    color:#d6b56c;
+                    text-decoration:none;
+                    letter-spacing:2px;
+                "
+            >
+                VIEW CERTIFICATE
+            </a>
+        `;
 
-            const response = await fetch(file, {
-                method: "HEAD",
-                cache: "no-store"
-            });
+    } else {
 
-            if (response.ok) {
+        result.style.display = "block";
 
-                window.open(file, "_blank");
+        result.innerHTML = `
+            <h3 style="color:#b99755; letter-spacing:3px;">
+                NOT VERIFIED
+            </h3>
 
-                certificateStatus.style.display = "none";
-
-                return;
-            }
-
-        } catch (error) {
-
-            console.log("Certificate check failed:", error);
-
-        }
-
+            <p>
+                The authenticity code could not be verified.
+            </p>
+        `;
     }
-
-    certificateStatus.textContent =
-        "Certificate file could not be located.";
-
-});
-
+}
 
 </script>
 
-
 </body>
-    </html>
+        </html>
