@@ -72,7 +72,7 @@ h1 {
     display: block;
     margin: auto;
     border: 1px solid #6b542d;
-    box-shadow: 0 0 45px rgba(190, 150, 70, 0.12);
+    box-shadow: 0 0 45px rgba(190,150,70,0.12);
 }
 
 section {
@@ -86,6 +86,12 @@ h2 {
     letter-spacing: 4px;
     border-bottom: 1px solid #4e3d22;
     padding-bottom: 12px;
+}
+
+h3 {
+    color: #d6b56c;
+    font-weight: normal;
+    letter-spacing: 3px;
 }
 
 .history {
@@ -440,7 +446,7 @@ footer {
 
         <a
             class="certificate-button"
-            href="NO-001-Certificate-of-Authenticity.png"
+            href="NO-001-Certificate-of-Authenticity.png.png"
             target="_blank"
             rel="noopener"
         >
@@ -554,7 +560,7 @@ function verifyArtwork() {
         result.style.display = "block";
 
         result.innerHTML = `
-            <h3 style="color:#d6b56c; letter-spacing:3px;">
+            <h3>
                 VERIFIED
             </h3>
 
@@ -581,13 +587,13 @@ function verifyArtwork() {
 
             <p>
                 <strong>SHA-256:</strong><br>
-                <span style="font-family:monospace; word-break:break-all;">
+                <span style="font-family:monospace;word-break:break-all;">
                 b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
                 </span>
             </p>
 
             <a
-                href="NO-001-Certificate-of-Authenticity.png"
+                href="NO-001-Certificate-of-Authenticity.png.png"
                 target="_blank"
                 rel="noopener"
                 style="
@@ -609,7 +615,7 @@ function verifyArtwork() {
         result.style.display = "block";
 
         result.innerHTML = `
-            <h3 style="color:#b99755; letter-spacing:3px;">
+            <h3>
                 NOT VERIFIED
             </h3>
 
@@ -623,4 +629,4 @@ function verifyArtwork() {
 </script>
 
 </body>
-        </html>
+    </html>
