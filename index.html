@@ -4,11 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natura Obscura — NO-001 | Lumen Orchid</title>
+<title>Natura Obscura — NO-001 | Verify</title>
 
 <style>
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,17 +20,19 @@ body {
     background: #050505;
     color: #d8c7a0;
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.8;
+    line-height: 1.7;
 }
 
 .container {
     width: min(1100px, 92%);
-    margin: auto;
+    margin: 0 auto;
 }
+
+/* HEADER */
 
 header {
     text-align: center;
-    padding: 60px 20px 35px;
+    padding: 60px 20px 40px;
     border-bottom: 1px solid #5b4827;
 }
 
@@ -34,217 +40,176 @@ header {
     font-size: 15px;
     letter-spacing: 6px;
     text-transform: uppercase;
-    color: #b99755;
+    color: #b99a5a;
 }
 
 h1 {
-    margin: 15px 0 5px;
-    font-size: clamp(38px, 7vw, 72px);
+    margin: 18px 0 8px;
+    font-size: clamp(34px, 6vw, 58px);
+    letter-spacing: 9px;
     font-weight: normal;
-    letter-spacing: 5px;
-    color: #d6b56c;
+    color: #d8c7a0;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 4px;
-    color: #9f8b68;
+    color: #a99269;
 }
 
-.verified {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 10px 28px;
-    border: 1px solid #b99755;
-    color: #d8bb76;
-    letter-spacing: 4px;
-    font-size: 13px;
-}
-
-.hero {
-    margin: 45px auto;
-    text-align: center;
-}
-
-.hero img {
-    width: 100%;
-    max-width: 900px;
-    display: block;
-    margin: auto;
-    border: 1px solid #6b542d;
-    box-shadow: 0 0 45px rgba(190,150,70,0.12);
-}
+/* SECTIONS */
 
 section {
-    margin: 60px 0;
+    padding: 55px 0;
+    border-bottom: 1px solid #5b4827;
 }
 
-h2 {
-    color: #d6b56c;
+.section-title {
+    margin-bottom: 24px;
     font-size: 24px;
-    font-weight: normal;
-    letter-spacing: 4px;
-    border-bottom: 1px solid #4e3d22;
-    padding-bottom: 12px;
-}
-
-h3 {
-    color: #d6b56c;
-    font-weight: normal;
-    letter-spacing: 3px;
-}
-
-.history {
-    font-size: 17px;
-    color: #c8baa0;
-    max-width: 900px;
-}
-
-.record {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1px;
-    background: #4e3d22;
-    border: 1px solid #4e3d22;
-}
-
-.item {
-    background: #080808;
-    padding: 22px;
-}
-
-.label {
-    display: block;
-    color: #88734d;
-    font-size: 12px;
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    color: #b99a5a;
 }
 
-.value {
-    color: #d7c59d;
+.description {
+    max-width: 850px;
+    color: #b9ad97;
     font-size: 16px;
 }
 
+/* HASH */
+
+.hash-box {
+    margin-top: 30px;
+    padding: 28px;
+    background: #080808;
+    border: 1px solid #5b4827;
+}
+
+.hash-label {
+    display: block;
+    margin-bottom: 14px;
+    color: #9d8350;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
 .hash {
-    background: #080808;
-    border: 1px solid #4e3d22;
-    padding: 25px;
-    word-break: break-all;
-    color: #bfa66d;
-    font-family: monospace;
-    font-size: 14px;
-}
-
-.certificate-box {
-    text-align: center;
-    background: #080808;
-    border: 1px solid #6b542d;
-    padding: 35px 20px;
-}
-
-.certificate-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 13px 30px;
-    border: 1px solid #b99755;
-    color: #d6b56c;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.certificate-button:hover {
-    background: #b99755;
-    color: #050505;
-}
-
-.verify-box {
-    background: #080808;
-    border: 1px solid #4e3d22;
-    padding: 30px;
-    text-align: center;
-}
-
-.verify-input {
-    width: 100%;
-    max-width: 650px;
-    padding: 15px;
-    margin: 15px 0;
-    background: #050505;
-    border: 1px solid #6b542d;
     color: #d8c7a0;
-    font-family: monospace;
+    font-family: "Courier New", monospace;
     font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    word-break: break-all;
 }
+
+/* RECORD */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.info-card {
+    padding: 22px;
+    background: #080808;
+    border: 1px solid #3f321d;
+}
+
+.info-label {
+    color: #927743;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.info-value {
+    margin-top: 8px;
+    color: #d8c7a0;
+    font-size: 17px;
+}
+
+/* CERTIFICATE */
+
+.certificate {
+    text-align: center;
+}
+
+.certificate .description {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.certificate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1536px;
+    margin: 35px auto 0;
+    border: 1px solid #5b4827;
+    box-shadow: 0 0 35px rgba(0,0,0,.65);
+}
+
+/* BUTTON */
 
 .verify-button {
-    padding: 13px 30px;
-    background: transparent;
-    border: 1px solid #b99755;
-    color: #d6b56c;
-    cursor: pointer;
-    letter-spacing: 2px;
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    border: 1px solid #8d6d32;
+    color: #d8c7a0;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: .25s ease;
 }
 
-.verify-result {
-    margin-top: 25px;
-    display: none;
-    padding: 20px;
-    border: 1px solid #6b542d;
+.verify-button:hover {
+    background: #15110a;
+    border-color: #c5a45f;
 }
 
-.seal {
-    text-align: center;
-    margin: 70px 0;
-    padding: 45px 20px;
-    border-top: 1px solid #4e3d22;
-    border-bottom: 1px solid #4e3d22;
-}
-
-.seal-title {
-    font-size: 20px;
-    letter-spacing: 5px;
-    color: #d6b56c;
-}
-
-.seal-text {
-    color: #92836a;
-    margin-top: 10px;
-}
+/* FOOTER */
 
 footer {
+    padding: 50px 20px;
     text-align: center;
-    padding: 45px 20px;
-    border-top: 1px solid #4e3d22;
-    color: #71664f;
+    color: #75684f;
     font-size: 12px;
     letter-spacing: 2px;
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     header {
-        padding-top: 35px;
+        padding-top: 40px;
     }
 
-    .subtitle {
-        font-size: 13px;
-        letter-spacing: 2px;
+    h1 {
+        letter-spacing: 5px;
     }
 
-    section {
-        margin: 40px 0;
+    .section-title {
+        letter-spacing: 4px;
     }
 
-    .history {
-        font-size: 15px;
+    .hash-box {
+        padding: 20px;
     }
 
     .hash {
         font-size: 11px;
     }
+
+    .info-card {
+        padding: 18px;
+    }
+
 }
 </style>
 </head>
@@ -259,374 +224,179 @@ footer {
         Natura Obscura
     </div>
 
-    <h1>NO-001</h1>
+    <h1>
+        VERIFY
+    </h1>
 
     <div class="subtitle">
-        The Eternal Archive
-    </div>
-
-    <div class="verified">
-        VERIFIED ARCHIVAL RECORD
+        THE HIDDEN ARCHIVE OF NATURE
     </div>
 
 </header>
 
 
-<section class="hero">
+<section>
+
+    <div class="section-title">
+        Cryptographic Identity
+    </div>
+
+    <p class="description">
+        The following SHA-256 fingerprint represents the
+        cryptographic identity of the archived original digital
+        artwork associated with Natura Obscura — NO-001.
+    </p>
+
+    <div class="hash-box">
+
+        <span class="hash-label">
+            SHA-256
+        </span>
+
+        <div class="hash">
+            b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="section-title">
+        Official Record
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <div class="info-label">
+                Artwork ID
+            </div>
+            <div class="info-value">
+                NO-001
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Artwork Title
+            </div>
+            <div class="info-value">
+                Lumen Orchid
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Scientific Name
+            </div>
+            <div class="info-value">
+                Orchidalis lumen obscura
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Edition
+            </div>
+            <div class="info-value">
+                1 / 1 — One of One
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Archive
+            </div>
+            <div class="info-value">
+                Archive I — Impossible Flora
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Medium
+            </div>
+            <div class="info-value">
+                Digital Fine Art
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Authenticity Code
+            </div>
+            <div class="info-value">
+                NO-A1-FL001-2026-0001
+            </div>
+        </div>
+
+
+        <div class="info-card">
+            <div class="info-label">
+                Certificate ID
+            </div>
+            <div class="info-value">
+                NO-001-CT-0525-A1
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="certificate">
+
+    <div class="section-title">
+        Official Certificate
+    </div>
+
+    <p class="description">
+        This is the official Certificate of Authenticity associated
+        with Natura Obscura — NO-001.
+    </p>
+
 
     <img
-        src="NO-001-original.png"
-        alt="Natura Obscura NO-001 — Lumen Orchid"
+        src="NO-001-Certificate-of-Authenticity.png.png"
+        alt="Natura Obscura NO-001 Certificate of Authenticity"
     >
 
-</section>
 
-
-<section>
-
-    <h2>LUMEN ORCHID</h2>
-
-    <p class="history">
-        <em>Orchidalis lumen obscura</em>
-    </p>
-
-    <p class="history">
-        NO-001 marks the beginning of the Natura Obscura collection
-        and the first recorded specimen within The Eternal Archive.
-    </p>
-
-    <p class="history">
-        The work presents Lumen Orchid, a fictional botanical species
-        conceived as a form of nature existing beyond the known boundaries
-        of natural law.
-    </p>
-
-    <p class="history">
-        Its petals are imagined as translucent structures capable of
-        absorbing remnants of extinguished starlight and transforming them
-        into a silent internal glow. Rather than seeking illumination,
-        Lumen Orchid is conceived as a memory of light itself.
-    </p>
-
-    <p class="history">
-        The specimen was designated NO-001 and recorded as a unique
-        1/1 digital artwork. Its identity is preserved through archival
-        documentation, a unique Certificate ID, and a cryptographic
-        SHA-256 fingerprint derived from the official digital artwork file.
-    </p>
-
-    <p class="history">
-        This record forms part of the permanent digital archive of
-        Natura Obscura — The Eternal Archive.
-    </p>
+    <a
+        class="verify-button"
+        href="NO-001-Certificate-of-Authenticity.png.png"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        View Official Certificate
+    </a>
 
 </section>
-
-
-<section>
-
-    <h2>ORIGIN &amp; RECORD</h2>
-
-    <div class="record">
-
-        <div class="item">
-            <span class="label">Work ID</span>
-            <span class="value">NO-001</span>
-        </div>
-
-        <div class="item">
-            <span class="label">Species</span>
-            <span class="value">Lumen Orchid</span>
-        </div>
-
-        <div class="item">
-            <span class="label">Scientific Designation</span>
-            <span class="value">
-                <em>Orchidalis lumen obscura</em>
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Archive</span>
-            <span class="value">
-                Archive I — Impossible Flora
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Discovery</span>
-            <span class="value">
-                Nexus Tenebris
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Date</span>
-            <span class="value">
-                05.2025
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Edition</span>
-            <span class="value">
-                1/1 — Unique
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Medium</span>
-            <span class="value">
-                Digital Fine Art
-            </span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>AUTHENTICITY</h2>
-
-    <div class="record">
-
-        <div class="item">
-            <span class="label">Certificate ID</span>
-            <span class="value">
-                NO-001-CT-0525-A1
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Authenticity Code</span>
-            <span class="value">
-                NO-A1-FL001-2026-0001
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Status</span>
-            <span class="value">
-                Original Digital Artwork
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Edition</span>
-            <span class="value">
-                1/1 — Unique
-            </span>
-        </div>
-
-        <div class="item">
-            <span class="label">Verification</span>
-            <span class="value">
-                Cryptographic SHA-256 Identity
-            </span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>OFFICIAL CERTIFICATE</h2>
-
-    <div class="certificate-box">
-
-        <p class="history" style="margin-left:auto;margin-right:auto;">
-            The official Certificate of Authenticity for NO-001
-            is permanently archived as part of
-            The Eternal Archive.
-        </p>
-
-        <a
-            class="certificate-button"
-            href="NO-001-Certificate-of-Authenticity.png.png"
-            target="_blank"
-            rel="noopener"
-        >
-            VIEW OFFICIAL CERTIFICATE
-        </a>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>VERIFY NO-001</h2>
-
-    <div class="verify-box">
-
-        <p class="history" style="margin-left:auto;margin-right:auto;">
-            Enter the official Authenticity Code to verify
-            the archived record of NO-001.
-        </p>
-
-        <input
-            id="codeInput"
-            class="verify-input"
-            type="text"
-            placeholder="Enter Authenticity Code"
-            autocomplete="off"
-        >
-
-        <br>
-
-        <button
-            class="verify-button"
-            onclick="verifyArtwork()"
-        >
-            VERIFY ARTWORK
-        </button>
-
-        <div id="verifyResult" class="verify-result"></div>
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>CRYPTOGRAPHIC IDENTITY</h2>
-
-    <p class="history">
-        The following SHA-256 fingerprint represents the cryptographic
-        identity of the official digital artwork file associated with NO-001.
-    </p>
-
-    <div class="hash">
-        b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
-    </div>
-
-</section>
-
-
-<div class="seal">
-
-    <div class="seal-title">
-        NATURA OBSCURA
-    </div>
-
-    <div class="seal-text">
-        THE ETERNAL ARCHIVE
-    </div>
-
-    <div class="seal-text">
-        This record belongs to the official archival identity
-        of Natura Obscura — NO-001.
-    </div>
-
-</div>
 
 
 <footer>
 
-    © 2025 NATURA OBSCURA — THE ETERNAL ARCHIVE
-
+    NATURA OBSCURA
     <br>
 
-    NO-001 · LUMEN ORCHID · ORIGINAL DIGITAL FINE ART
+    THE HIDDEN ARCHIVE OF NATURE
+    <br><br>
+
+    NO-001 — LUMEN ORCHID
 
 </footer>
 
 </div>
 
-
-<script>
-
-function verifyArtwork() {
-
-    const input = document
-        .getElementById("codeInput")
-        .value
-        .trim()
-        .toUpperCase();
-
-    const result = document
-        .getElementById("verifyResult");
-
-    const officialCode = "NO-A1-FL001-2026-0001";
-
-    if (input === officialCode) {
-
-        result.style.display = "block";
-
-        result.innerHTML = `
-            <h3>
-                VERIFIED
-            </h3>
-
-            <p>
-                The authenticity code is valid.
-            </p>
-
-            <p>
-                <strong>Work ID:</strong> NO-001
-            </p>
-
-            <p>
-                <strong>Artwork:</strong> Lumen Orchid
-            </p>
-
-            <p>
-                <strong>Edition:</strong> 1/1 — Unique
-            </p>
-
-            <p>
-                <strong>Archive:</strong>
-                Archive I — Impossible Flora
-            </p>
-
-            <p>
-                <strong>SHA-256:</strong><br>
-                <span style="font-family:monospace;word-break:break-all;">
-                b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
-                </span>
-            </p>
-
-            <a
-                href="NO-001-Certificate-of-Authenticity.png.png"
-                target="_blank"
-                rel="noopener"
-                style="
-                    display:inline-block;
-                    margin-top:15px;
-                    padding:12px 25px;
-                    border:1px solid #b99755;
-                    color:#d6b56c;
-                    text-decoration:none;
-                    letter-spacing:2px;
-                "
-            >
-                VIEW CERTIFICATE
-            </a>
-        `;
-
-    } else {
-
-        result.style.display = "block";
-
-        result.innerHTML = `
-            <h3>
-                NOT VERIFIED
-            </h3>
-
-            <p>
-                The authenticity code could not be verified.
-            </p>
-        `;
-    }
-}
-
-</script>
-
 </body>
-    </html>
+</html>
