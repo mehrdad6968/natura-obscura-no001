@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,8 +8,6 @@
 
 <meta name="description"
 content="Official verification record for Natura Obscura — NO-001, Lumen Orchid.">
-
-<meta name="robots" content="index, follow">
 
 <style>
 
@@ -87,6 +84,29 @@ section {
     max-width: 850px;
     color: #b9ad97;
     font-size: 16px;
+}
+
+/* =========================
+   ARTWORK
+========================= */
+
+.artwork {
+    text-align: center;
+}
+
+.artwork-image-wrapper {
+    margin: 35px auto 0;
+    max-width: 1000px;
+    background: #080808;
+    border: 1px solid #5b4827;
+    padding: 15px;
+    box-shadow: 0 0 35px rgba(0,0,0,.65);
+}
+
+.artwork-image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* =========================
@@ -193,10 +213,6 @@ section {
     margin-right: auto;
 }
 
-/*
-   The Certificate image itself is NOT modified.
-*/
-
 .certificate-wrapper {
     position: relative;
     width: 100%;
@@ -209,54 +225,37 @@ section {
     width: 100%;
     height: auto;
     border: 1px solid #5b4827;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 0 35px rgba(0,0,0,.65);
 }
 
-/*
-   Invisible clickable area over the
-   VERIFY ARTWORK section inside the
-   Certificate image.
-*/
+/* Invisible clickable Verify area */
 
 .verify-hotspot {
     position: absolute;
-
     left: 72.5%;
     top: 62%;
     width: 25%;
     height: 17%;
-
     display: block;
-
     background: transparent;
-
     cursor: pointer;
-
     z-index: 10;
 }
 
 /* =========================
-   VERIFY BUTTON
+   BUTTON
 ========================= */
 
 .verify-button {
     display: inline-block;
-
     margin-top: 35px;
-
     padding: 14px 30px;
-
     border: 1px solid #8d6d32;
-
     color: #d8c7a0;
-
     text-decoration: none;
-
     letter-spacing: 3px;
-
     text-transform: uppercase;
-
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .verify-button:hover {
@@ -271,13 +270,9 @@ section {
 
 footer {
     padding: 55px 20px;
-
     text-align: center;
-
     color: #75684f;
-
     font-size: 12px;
-
     letter-spacing: 2px;
 }
 
@@ -319,29 +314,20 @@ footer {
         font-size: 11px;
     }
 
-    /*
-       Keep the clickable Verify area
-       proportional on mobile.
-    */
-
     .verify-hotspot {
         left: 72.5%;
         top: 62%;
         width: 25%;
         height: 17%;
     }
-
 }
 
 </style>
-
 </head>
-
 
 <body>
 
 <div class="container">
-
 
 <!-- =========================
      HEADER
@@ -365,6 +351,34 @@ footer {
 
 
 <!-- =========================
+     ORIGINAL ARTWORK
+========================= -->
+
+<section class="artwork">
+
+    <div class="section-title">
+        Original Artwork
+    </div>
+
+    <p class="description">
+        Official original artwork associated with
+        Natura Obscura — NO-001.
+    </p>
+
+    <div class="artwork-image-wrapper">
+
+        <img
+            class="artwork-image"
+            src="NO-001-original.png"
+            alt="Natura Obscura NO-001 — Lumen Orchid"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      CRYPTOGRAPHIC IDENTITY
 ========================= -->
 
@@ -375,13 +389,10 @@ footer {
     </div>
 
     <p class="description">
-
         The following SHA-256 fingerprint represents the
         cryptographic identity of the archived original digital
         artwork associated with Natura Obscura — NO-001.
-
     </p>
-
 
     <div class="hash-box">
 
@@ -390,9 +401,7 @@ footer {
         </span>
 
         <div class="hash">
-
             b8884f72774a637f6d318c6758d25d16cac980a6494a636c203b0950acaf9723
-
         </div>
 
     </div>
@@ -410,113 +419,97 @@ footer {
         Official Record
     </div>
 
-
     <div class="info-grid">
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Artwork ID
             </div>
-
             <div class="info-value">
                 NO-001
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Artwork Title
             </div>
-
             <div class="info-value">
                 Lumen Orchid
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Scientific Name
             </div>
-
             <div class="info-value">
                 Orchidalis lumen obscura
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Edition
             </div>
-
             <div class="info-value">
                 1 / 1 — One of One
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Archive
             </div>
-
             <div class="info-value">
                 Archive I — Impossible Flora
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Medium
             </div>
-
             <div class="info-value">
                 Digital Fine Art
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Authenticity Code
             </div>
-
             <div class="info-value">
                 NO-A1-FL001-2026-0001
             </div>
-
         </div>
 
-
         <div class="info-card">
-
             <div class="info-label">
                 Certificate ID
             </div>
-
             <div class="info-value">
                 NO-001-CT-0525-A1
             </div>
-
         </div>
 
+        <div class="info-card">
+            <div class="info-label">
+                Artist
+            </div>
+            <div class="info-value">
+                Mehrdad Shokri
+            </div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-label">
+                Project
+            </div>
+            <div class="info-value">
+                NATURA OBSCURA
+            </div>
+        </div>
 
     </div>
 
@@ -524,7 +517,7 @@ footer {
 
 
 <!-- =========================
-     OFFICIAL VERIFY ADDRESS
+     OFFICIAL VERIFY URL
 ========================= -->
 
 <section>
@@ -534,12 +527,9 @@ footer {
     </div>
 
     <p class="description">
-
         This is the official verification address for
         Natura Obscura — NO-001.
-
     </p>
-
 
     <div class="verify-address">
 
@@ -566,38 +556,25 @@ footer {
 
 <section class="certificate">
 
-
     <div class="section-title">
         Official Certificate
     </div>
 
-
     <p class="description">
-
         This is the official Certificate of Authenticity associated
         with Natura Obscura — NO-001.
-
     </p>
 
-
     <div class="certificate-wrapper">
-
-
-        <!--
-            IMPORTANT:
-            This is the exact Certificate file currently
-            uploaded to the repository.
-        -->
 
         <img
             src="NO-001-Certificate-of-Authenticity.png.png"
             alt="Natura Obscura NO-001 Certificate of Authenticity"
         >
 
-
         <!--
-            Invisible clickable area positioned over
-            the VERIFY ARTWORK section of the Certificate.
+            Clicking the Verify Artwork area
+            opens the official Verify page.
         -->
 
         <a
@@ -609,13 +586,7 @@ footer {
             title="Verify Artwork"
         ></a>
 
-
     </div>
-
-
-    <!--
-        Secondary visible verification button.
-    -->
 
     <a
         class="verify-button"
@@ -625,7 +596,6 @@ footer {
     >
         Verify Artwork
     </a>
-
 
 </section>
 
@@ -648,8 +618,7 @@ footer {
 
 </footer>
 
-
 </div>
 
 </body>
-</html>
+                </html>
